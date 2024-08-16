@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/output.css" />
+    <title>Todo App</title>
+    <link rel="manifest" href="./assets/manifest.json" />
+    <link rel="shortcut icon" href="./assets/check.png" type="image/x-icon" />
+  </head>
+  <body class="flex justify-center items-center h-[100lvh] w-[100lvw]">
+    <section
+      class="border border-sky-600 w-full mx-5 md:w-[50%] h-fit min-h-[50%] flex justify-between items-center flex-col"
+    >
+      <header
+        class="w-full h-16 font-mono p-4 bg-sky-600 text-white justify-center flex items-center"
+      >
+        <h1 class="text-3xl">To do List</h1>
+      </header>
+      <!-- todos -->
+      <div class="h-full w-full bg-slate-300 min-h-40">
+        <ul id="todos" class="self-center mx-auto text-center"></ul>
+      </div>
+      <br />
+      <main
+        class="w-4/5 py-2 my-2 rounded-md bg-sky-600 flex flex-col justify-evenly items-center"
+      >
+        <!-- inputs -->
+        <div
+          class="flex flex-col justify-around items-center gap-y-3 min-h-[250px] w-[90%]"
+        >
+          <h2 class="text-2xl text-white">Add new to do??</h2>
+          <form class="w-full space-y-3 flex flex-col">
+            <div class="flex justify-between items-center">
+              <label class="text-white" for="task">Task Title</label
+              ><input
+                type="text"
+                placeholder="add task title"
+                class="p-2 rounded-md ms-3 w-4/6"
+                name="task"
+                id="task"
+              />
+            </div>
+
+            <div class="flex justify-between items-center">
+              <label class="text-white" for="date">Notify Date</label>
+              <input
+                type="datetime-local"
+                class="p-2 rounded-md ms-3 w-4/6"
+                name="date"
+                id="date"
+              />
+            </div>
+            <button
+              type="submit"
+              class="bg-white p-2 rounded-sm w-5/6 self-center hover:bg-white/90"
+              id="addBtn"
+            >
+              Add Task
+            </button>
+          </form>
+        </div>
+      </main>
+    </section>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/idb.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
